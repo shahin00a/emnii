@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #050008;
+    color: white;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+#canvas {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+
+/* WELCOME PAGE */
+
+#welcome {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle, #350020, #050008);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    z-index: 100;
+}
+
+.welcome-box h1 {
+    color: #ff8fbd;
+    font-size: clamp(28px, 6vw, 42px);
+    margin: 20px 0;
+    text-shadow: 0 0 20px #ff1493;
+}
+
+.welcome-box p {
+    color: pink;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.welcome-heart {
+    font-size: 80px;
+    animation: beat 1s infinite;
+    filter: drop-shadow(0 0 20px #ff1493);
+}
+
+
+/* BUTTON */
+
+button {
+    padding: 14px 25px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #ff1493, #ff69b4);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 0 20px #ff1493;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.06);
+}
+
+
+/* MAIN PAGE */
+
+#main {
+    display: none;
+    position: relative;
+    z-index: 2;
+    min-height: 100vh;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 15px;
+}
+
+#main h1 {
+    color: #ff8fbd;
+    font-size: clamp(30px, 6vw, 48px);
+    text-shadow: 0 0 20px #ff1493;
+    margin-bottom: 20px;
+}
+
+.name {
+    color: #ffb6c1;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.heart {
+    font-size: 85px;
+    animation: beat 1s infinite;
+    filter: drop-shadow(0 0 20px #ff1493);
+}
+
+.message {
+    color: #ffd5e5;
+    line-height: 1.9;
+    max-width: 350px;
+    margin: 20px auto;
+    font-size: 15px;
+}
+
+
+/* NAME INPUT */
+
+.name-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin: 20px auto;
+    width: 100%;
+}
+
+.name-inputs input {
+    width: 260px;
+    max-width: 100%;
+    padding: 13px;
+    border: 1px solid #ff69b4;
+    border-radius: 25px;
+    background: #1a0015;
+    color: white;
+    text-align: center;
+    outline: none;
+    font-size: 14px;
+}
+
+.name-inputs input::placeholder {
+    color: pink;
+}
+
+.name-inputs input:focus {
+    box-shadow: 0 0 15px #ff1493;
+}
+
+
+/* NEW LOVE PAGE */
+
+#lovePage {
+    display: none;
+    position: relative;
+    z-index: 3;
+    min-height: 100vh;
+    width: 100%;
+    background: radial-gradient(circle, #350020, #050008);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+
+#lovePage h1 {
+    color: #ff8fbd;
+    font-size: clamp(25px, 6vw, 42px);
+    text-shadow: 0 0 20px #ff1493;
+    margin: 15px;
+}
+
+.love-emojis {
+    font-size: clamp(22px, 5vw, 30px);
+    margin: 20px 0;
+    animation: beat 1s infinite;
+}
+
+.big-heart {
+    font-size: 100px;
+    animation: beat 0.8s infinite;
+    filter: drop-shadow(0 0 25px #ff1493);
+}
+
+#lovePage p {
+    color: pink;
+    font-size: 20px;
+    margin: 15px;
+}
+
+.back-button {
+    margin-top: 25px;
+}
+
+
+/* FOOTER */
+
+.footer {
+    color: #ff91bb;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+
+/* ANIMATIONS */
+
+@keyframes beat {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+}
